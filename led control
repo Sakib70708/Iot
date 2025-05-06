@@ -1,0 +1,13 @@
+int LED = 13;
+int POTENTIOMETER = A0;
+
+void setup() {
+  pinMode(LED, OUTPUT);
+}
+void loop() {
+  //READ ANALOG INPUT FROM PIN 0
+  int sensorvalue = analogRead(POTENTIOMETER);
+  //SET LED BRIGHTNESS BASED ON INPUT
+  analogWrite(LED,sensorvalue);
+  delay(3); //DELAY 3S
+}
